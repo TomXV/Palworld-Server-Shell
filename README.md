@@ -22,5 +22,5 @@ Ubuntuの構築方法がわかる。少しだけ、英語が読める。
 ## コマンド
 以下のコマンドをコピペして実行してください。
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/TomXV/Palworld-Server-Shell/main/Palworld.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/TomXV/Palworld-Server-Shell/dev/Palworld.sh)"
 ```
