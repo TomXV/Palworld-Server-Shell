@@ -11,10 +11,13 @@ Ubuntuの構築方法がわかる。少しだけ、英語が読める。
 
 
 ## 注意事項
->WSL(Windows Sub-system for Linux)では、動作未確認です。
->>万が一、未確認の動作環境で実行しても一切の責任を負いません。
+> [!WARNING]
+>> WSL(Windows Sub-system for Linux)では、動作未確認です。
+>>
+>>  万が一、未確認の動作環境で実行しても一切の責任を負いません。
 
-仕様上、root権限(#)ではサーバーは稼働しません。user権限($)で実行してください。
+> [!CAUTION]
+> 仕様上、root権限(#)ではサーバーは稼働しません。user権限($)で実行してください。
 
 ## 前提環境
 シェルを実行するために、curlをインストールしてください。
@@ -26,3 +29,16 @@ Ubuntuの構築方法がわかる。少しだけ、英語が読める。
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/TomXV/Palworld-Server-Shell/main/Palworld.sh)"
 ```
+
+## トラブルシューティング
+> [!NOTE]
+> steamclinet.soのシンボリックリンク先がPalServerに同梱されたものにしてありますが
+>
+> 万が一読み込めなかった場合は、以下の通りに操作してください
+
+```sh
+unlink ~/.steam/sdk64/steamclient.so
+ln ~/Steam/steamapps/common/Steamworks\ SDK\ Redist/linux64/steamclient.so ~/.steam/sdk64/steamclient.so
+```
+
+> 起動時に１度エラーが表示されますが、 `.steam/sdk64/steamclient.so OK.  (First tried local 'steamclient.so')` が表示されていればこの操作は不要です。
