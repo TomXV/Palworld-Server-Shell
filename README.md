@@ -1,6 +1,8 @@
 # Palworld-Server-Shell
 **このスクリプトは、Debian/Ubuntu 22.04 (or Ubuntu Server 22.04)で動作します。**
 
+私は、Proxmox VE 8.1にUbuntu Server 22.04の環境で建てました。
+
 このシェルを実行するだけで、Palworldの専用サーバを簡単に構築できます。
 
 ---
